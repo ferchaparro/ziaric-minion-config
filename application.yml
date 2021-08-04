@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:${EUREKA_PORT:8761}/eureka/}
+    register-with-eureka: true
+ribbon:
+  ReadTimeout: 60000
+
+token: 
+  key: j3H5Ld5nYmGWyULy6xwpOgfSH++NgKXnJMq20vpfd+8=t
+  expiration: 10
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+    

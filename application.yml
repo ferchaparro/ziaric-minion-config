@@ -11,6 +11,14 @@ token:
   expiration: 10
 
 spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: mongoadmin
+      password: fl200110
+      database: minion_project_db
+      port: 27017
+      host: localhost
   servlet:
     multipart:
       max-file-size: 30MB

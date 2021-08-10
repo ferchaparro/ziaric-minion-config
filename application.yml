@@ -11,14 +11,17 @@ token:
   expiration: 10
 
 spring:
-  data:
-    mongodb:
-      authentication-database: admin
-      username: mongoadmin
-      password: fl200110
-      database: minion_project_db
-      port: 27017
-      host: localhost
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/minion_project_db
+    username: ${PSQLUSER:postgres}
+    password: ${PSQLPASS:fl200110}
+    driverClassName: org.postgresql.Driver
   servlet:
     multipart:
       max-file-size: 30MB

@@ -11,6 +11,8 @@ token:
   expiration: 10
 
 spring:
+  profiles:
+    active: aws
   jpa:
     database: POSTGRESQL
     show-sql: false

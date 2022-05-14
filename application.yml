@@ -188,4 +188,14 @@ menu:
         any: true
         action: delete
 
+storage:
+  aws:
+    access:
+      id: ${AWS_ID:none}
+      secret: ${AWS_SECRET:none}
+      region: us-west-1
+    bucket: ziaric-minion-project
+  local:
+      base: /home/ubuntu/minion_local_storage
+
     

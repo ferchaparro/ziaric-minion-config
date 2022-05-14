@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_URI:http://localhost:${EUREKA_PORT:8761}/eureka/}
+      defaultZone: ${EUREKA_URI:http://register-server:${EUREKA_PORT:8761}/eureka/}
     register-with-eureka: true
 ribbon:
   ReadTimeout: 60000
@@ -18,7 +18,7 @@ spring:
       ddl-auto: update
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/minion_project_db
+    url: jdbc:postgresql://db-service:5432/minion_project_db
     username: ${PSQLUSER:postgres}
     password: ${PSQLPASS:fl200110}
     driverClassName: org.postgresql.Driver
@@ -188,5 +188,5 @@ menu:
 
 storage:
   local:
-    base: Z:\minion_project_storage
+    base: /home/ubuntu/minion_local_storage
     

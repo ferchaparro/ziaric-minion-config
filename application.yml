@@ -134,7 +134,7 @@ menu:
         action: book
       -
         title: Bloquear fecha
-        subtitle: Marcar gechas como no disponible para renta.
+        subtitle: Marcar fechas como no disponible para renta.
         icon: event_busy
         order: 2
         any: false

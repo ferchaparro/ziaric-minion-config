@@ -26,4 +26,167 @@ spring:
     multipart:
       max-file-size: 30MB
       max-request-size: 30MB
+
+app:
+  subscription:
+    plans:
+      -
+        key: BASIC
+        name: Plan inicial
+        maxPlaces: 5
+        maxPlaceImages: 10
+        price: 100
+      -
+        key: BASIC_YEAR
+        name: Plan inicial (anual)
+        maxPlaces: 5
+        maxPlaceImages: 10
+        price: 1000
+      -
+        key: ADVANCE20
+        name: Plan avanzado
+        maxPlaces: 20
+        maxPlaceImages: 15
+        price: 300
+      -
+        key: ADVANCE20_YEAR
+        name: Plan avanzado (anual)
+        maxPlaces: 20
+        maxPlaceImages: 15
+        price: 3000
+      -
+        key: ULTIMATE0
+        name: Plan ultimate
+        maxPlaces: 80
+        maxplaceImages: 30
+        price: 500
+      -
+        key: ULTIMATE0_YEAR
+        name: Plan ultimate (anual)
+        maxPlaces: 80
+        maxplaceImages: 30
+        price: 5000
+      -
+        key: INTERN
+        name: Interno
+        maxPlaces: 0
+        maxPlaceImages: 0
+        monthlyFee: 0
+        yearlyFee: 0
+
+menu:
+  main:
+    options:
+      -
+        label: Inicio
+        icon: home
+        order: 1
+        any: true
+        route: /
+      -
+        label: Lugares
+        icon: apartment
+        order: 5
+        any: true
+        route: /op/places
+      -
+        label: Rentas
+        icon: edit_calendar
+        order: 10
+        any: true
+        route: /op/rents
+      -
+        label: Calendario
+        icon: event
+        order: 15
+        any: true
+        route: /op/calendar
+      -
+        label: Crear usuario
+        icon: person_add
+        order: 20
+        any: false
+        route: /users/create
+        roles:
+          - ROLE_ADMIN
+          - ROLE_USERS_MANAGER
+          - ROLE_WRITE_USERS
+      -
+        label: Administrar usuarios
+        icon: people
+        order: 20
+        any: false
+        route: /users/manage
+        roles:
+          - ROLE_ADMIN
+          - ROLE_USERS_MANAGER
+
+  places:
+    options:
+      -
+        title: Reservar
+        subtitle: Agenda una reservacion.
+        icon: event
+        order: 1
+        any: true
+        action: book
+      -
+        title: Bloquear fecha
+        subtitle: Marcar gechas como no disponible para renta.
+        icon: event_busy
+        order: 2
+        any: false
+        action: block
+        roles:
+          - ROLE_PLACES_MANAGER
+      -
+        title: Enviar perfil
+        subtitle: Envia la pagina de perfil del lugar.
+        icon: send
+        order: 3
+        any: true
+        action: profile
+      -
+        title: Compartir
+        subtitle: Comparte tu lugar para que alguien mas pueda agendar.
+        icon: share
+        order: 4
+        any: false
+        action: share
+        roles:
+          - ROLE_SHARE_PLACES
+          - ROLE_PLACES_MANAGER
+      -
+        title: Configuración
+        subtitle: Configura precios, monto de deposito y anticipo, imgágenes.
+        icon: settings
+        order: 5
+        any: false
+        action: config
+        roles:
+          - ROLE_WRITE_PLACES
+          - ROLE_PLACES_MANAGER
+          - ROLE_ADMIN
+      -
+        title: Modificar
+        subtitle: Habilita para modificar el lugar.
+        icon: edit
+        order: 6
+        any: false
+        action: edit
+        roles:
+          - ROLE_WRITE_PLACES
+          - ROLE_PLACES_MANAGER
+          - ROLE_ADMIN
+      -
+        title: Eliminar
+        subtitle: Borrar el lugar, ya no sera visible.
+        icon: delete
+        order: 7
+        any: true
+        action: delete
+
+storage:
+  local:
+    base: Z:\minion_project_storage
     

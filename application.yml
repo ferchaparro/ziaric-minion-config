@@ -136,7 +136,7 @@ menu:
         title: Bloquear fecha
         subtitle: Marcar fechas como no disponible para renta.
         icon: event_busy
-        order: 2
+        order: 3
         any: false
         action: block
         roles:
@@ -145,14 +145,21 @@ menu:
         title: Enviar perfil
         subtitle: Envia la pagina de perfil del lugar.
         icon: send
-        order: 3
+        order: 5
         any: true
         action: profile
+      -
+        title: Enviar cuenta bancaria
+        subtitle: Envia la cuenta bancaria la interesado.
+        icon: account_balance
+        order: 7
+        any: true
+        action: bank_account
       -
         title: Compartir
         subtitle: Comparte tu lugar para que alguien mas pueda agendar.
         icon: share
-        order: 4
+        order: 9
         any: false
         action: share
         roles:
@@ -162,7 +169,7 @@ menu:
         title: Configuración
         subtitle: Configura precios, monto de deposito y anticipo, imgágenes.
         icon: settings
-        order: 5
+        order: 11
         any: false
         action: config
         roles:
@@ -173,7 +180,7 @@ menu:
         title: Modificar
         subtitle: Habilita para modificar el lugar.
         icon: edit
-        order: 6
+        order: 13
         any: false
         action: edit
         roles:
@@ -184,7 +191,7 @@ menu:
         title: Eliminar
         subtitle: Borrar el lugar, ya no sera visible.
         icon: delete
-        order: 7
+        order: 15
         any: true
         action: delete
 

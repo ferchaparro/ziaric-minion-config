@@ -10,11 +10,7 @@ token:
   key: j3H5Ld5nYmGWyULy6xwpOgfSH++NgKXnJMq20vpfd+8=t
   expiration: 10
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: *
+
 
 spring:
   profiles:

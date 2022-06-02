@@ -186,6 +186,15 @@ menu:
           - ROLE_PLACES_MANAGER
           - ROLE_ADMIN
       -
+        title: Precio extra
+        subtitle: Configura el aumento de precio por noche para el alojamiento.
+        icon: currency_exchange
+        order: 12
+        any: false
+        action: extraPrice
+        roles:
+          - ROLE_CAN_EXTRA_PRICE
+      -
         title: Modificar
         subtitle: Habilita para modificar el lugar.
         icon: edit

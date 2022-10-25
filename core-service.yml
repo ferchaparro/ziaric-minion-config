@@ -1,0 +1,7 @@
+plan:
+  trialDays: 3
+
+open-pay:
+  url: https://sandbox-api.openpay.mx
+  privateKey: sk_151523c36f3b4e9781732430c1115ed3
+  id: mpvwnq2cghq6uctkpsng

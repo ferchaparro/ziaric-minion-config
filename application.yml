@@ -40,6 +40,9 @@ spring:
 
 app:
   subscription:
+    price: 100
+    annualPrice: 1000
+    maxPlaceImages: 30
     plans:
       -
         key: BASIC

@@ -39,10 +39,11 @@ spring:
       max-request-size: 30MB
 
 app:
-  subscription:
+  subscription-features:
     price: 100
     annualPrice: 1000
     maxPlaceImages: 30
+  subscription:
     plans:
       -
         key: BASIC

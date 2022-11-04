@@ -5,3 +5,34 @@ open-pay:
   url: https://sandbox-api.openpay.mx
   privateKey: sk_151523c36f3b4e9781732430c1115ed3
   id: mpvwnq2cghq6uctkpsng
+
+discount:
+  rates:
+    -
+      min: 1
+      max: 4
+      discount: 0
+    -
+      min: 5
+      max: 9
+      discount: 0.05
+    -
+      min: 10
+      max: 14
+      discount: 0.1
+    -
+      min: 15
+      max: 19
+      discount: 0.2
+    -
+      min: 20
+      max: 29
+      discount: 0.25
+    -
+      min: 30
+      max: 49
+      discount: 0.3
+    -
+      min: 50
+      max: 100
+      discount: 0.35

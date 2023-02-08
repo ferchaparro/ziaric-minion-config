@@ -217,6 +217,95 @@ menu:
         any: true
         action: delete
 
+    global-options:
+      -
+        title: SEND_PLACE_PROFILE_TITLE
+        subtitle: SEND_PLACE_PROFILE_DESCRIPTION
+        icon: send
+        order: 5
+        any: true
+        action: profile
+      -
+        title: SHARE_PLACE_TITLE
+        subtitle: SHARE_PLACE_DESCRIPTION
+        icon: share
+        order: 9
+        any: false
+        action: share
+        roles:
+          - ROLE_SHARE_PLACES
+          - ROLE_PLACES_MANAGER
+      -
+        title: CONFIGURATION_TITLE
+        subtitle: CONFIGURATION_DESCRIPTION
+        icon: settings
+        order: 11
+        any: false
+        action: config
+        roles:
+          - ROLE_WRITE_PLACES
+          - ROLE_PLACES_MANAGER
+          - ROLE_ADMIN
+      -
+        title: EDIT_TITLE
+        subtitle: EDIT_DESCRIPTION
+        icon: edit
+        order: 13
+        any: false
+        action: edit
+        roles:
+          - ROLE_WRITE_PLACES
+          - ROLE_PLACES_MANAGER
+          - ROLE_ADMIN
+      -
+        title: DELETE_TITLE
+        subtitle: DELETE_DESCRIPTION
+        icon: delete
+        order: 15
+        any: true
+        action: delete
+
+    rent-options:
+      -
+        title: BOOK_TITLE
+        subtitle: BOOK_DESCRIPTION
+        icon: event
+        order: 1
+        any: true
+        action: book
+      -
+        title: DISABLE_DATE_TITLE
+        subtitle: DISABLE_DATE_DESCRIPTION
+        icon: event_busy
+        order: 3
+        any: false
+        action: block
+        roles:
+          - ROLE_PLACES_MANAGER
+      -
+        title: SEND_PLACE_PROFILE_TITLE
+        subtitle: SEND_PLACE_PROFILE_DESCRIPTION
+        icon: send
+        order: 5
+        any: true
+        action: profile
+      -
+        title: SEND_BANK_ACCOUNT_TITLE
+        subtitle: SEND_BANK_ACCOUNT_DESCRIPTION
+        icon: account_balance
+        order: 7
+        any: true
+        action: bank_account
+      -
+        title: EXTRA_PRICE_TITLE
+        subtitle: EXTRA_PRICE_DESCRIPTION
+        icon: currency_exchange
+        order: 12
+        any: false
+        action: extraPrice
+        roles:
+          - ROLE_CAN_EXTRA_PRICE
+
   discount-rates:
     options:
       -
